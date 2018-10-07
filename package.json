@@ -1,0 +1,30 @@
+{
+  "name": "gitlocal-user",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/flyhighair/gitlocal-user.git",
+  "author": "flyhighair <flyhighup.air25@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "./node_modules/.bin/babel-node src/cli.js"
+  },
+  "dependencies": {
+    "ink": "^0.5.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-plugin-transform-react-jsx": "^6.24.1"
+  },
+  "babel": {
+    "plugins": [
+      [
+        "transform-react-jsx",
+        {
+          "pragma": "h",
+          "useBuiltIns": true
+        }
+      ]
+    ]
+  }
+}
