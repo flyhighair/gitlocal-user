@@ -22,7 +22,9 @@
   "dependencies": {
     "ink": "^0.5.1",
     "ink-box": "^0.1.0",
-    "ink-text-input": "^2.0.0"
+    "ink-redux": "^1.0.0",
+    "ink-text-input": "^2.0.0",
+    "redux": "^4.0.1"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
