@@ -1,33 +1,22 @@
-const {h, render, Component, Color} = require('ink');
+#!/usr/bin/env node
+'use strict';
 
-class Counter extends Component {
-    constructor() {
-        super();
+const {h, render, Component} = require('ink');
+const { Provider } = require('ink-redux');
+const FormContainer = require('./containers/formContainer');
+const configureStore = require('./store/configureStore');
 
-        this.state = {
-            i: 0
-        };
-    }
+const initialState = { step: 0, name: '', email: ''};
+const store = configureStore(initialState);
 
-    componentDidMount() {
-        this.timer = setInterval(() => {
-            this.setState({
-                i: this.state.i + 1
-            });
-        }, 1000);
-    }
-
-    componentWillMount() {
-        clearInterval(this.timer);
-    }
-
-    render() {
-        return (
-            <Color green>
-                {this.state.i} tests passed
-            </Color>
-        );
-    }
+class LocalUser extends Component {
+	render() {
+		return (
+			<Provider store={store}>
+				<FormContainer />
+			</Provider>
+		);
+	}
 }
 
-render(<Counter/>);
+render(<LocalUser/>);
