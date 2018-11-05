@@ -1,0 +1,48 @@
+{
+  "name": "gitlocal-user",
+  "version": "1.0.0",
+  "description": "git local user settings",
+  "bin": {
+    "gitlocal-user": "dist/cli.js"
+  },
+  "engines": {
+    "node": ">=8"
+  },
+  "files": [
+    "dist"
+  ],
+  "repository": "https://github.com/flyhighair/gitlocal-user.git",
+  "author": "flyhighair <flyhighup.air25@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint src",
+    "start": "node dist/cli.js",
+    "build": "babel src --out-dir=dist"
+  },
+  "dependencies": {
+    "ink": "^0.5.1",
+    "ink-box": "^0.1.0",
+    "ink-redux": "^1.0.0",
+    "ink-text-input": "^2.0.0",
+    "meow": "^5.0.0",
+    "redux": "^4.0.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "eslint": "^5.6.1",
+    "eslint-plugin-react": "^7.11.1"
+  },
+  "babel": {
+    "plugins": [
+      [
+        "transform-react-jsx",
+        {
+          "pragma": "h",
+          "useBuiltIns": true
+        }
+      ]
+    ]
+  }
+}
