@@ -5,7 +5,6 @@ Perform git config local on an interactive interface.
 ## Usage
 
 ```console:
-$ npm i -g gitlocal-user
 $ cd [project repository]
-$ gitlocal-user
+$ npx gitlocal-user
 ```
